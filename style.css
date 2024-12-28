@@ -1,0 +1,196 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Arial', sans-serif;
+   background-color: hsl(187, 76%, 92%); 
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 50px auto;
+   background: white;
+   padding: 40px 30px;
+   border-radius: 10px;
+   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+}
+
+.header {
+   font-size: 36px;
+   color: #4A148C;
+   margin-bottom: 20px;
+   text-align: left;
+   display: flex;
+   align-items: center;
+}
+
+.header-icon {
+   width: 30px;
+   height: 30px;
+   margin-right: 10px;
+}
+
+textarea {
+   width: 100%;
+   height: 200px;
+   margin-bottom: 20px;
+   padding: 15px;
+   border-radius: 5px;
+   border: 2px solid #ccc;
+   font-size: 16px;
+}
+
+.language-selection {
+   display: flex;
+   justify-content: space-between;
+}
+
+.language-dropdown {
+   width: 48%;
+   padding: 12px;
+   border-radius: 5px;
+   border: 2px solid #ccc;
+   font-size: 16px;
+}
+
+.button-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   margin-top: 20px; 
+}
+
+.action-button {
+   padding: 12px; 
+   background-color: #4A148C; 
+   color: white;
+   border: none; 
+   border-radius: 5px; 
+   font-size: 18px; 
+
+   display: flex; 
+   align-items: center; 
+
+   transition: background-color 0.3s ease; 
+}
+
+#translateButton {
+  width: 260px; 
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+}
+
+.circular-button {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+
+  margin-left: 10px; 
+  margin-right: 10px;
+}
+
+.action-button:hover {
+  background-color: #2d075c; 
+}
+
+.spinner {
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display:inline-block; 
+  margin-left:10px; 
+}
+
+@keyframes spin {
+  from { transform : rotate(0deg); }
+  to { transform : rotate(360deg); }
+}
+
+.output-text {
+  margin-top: 20px;
+  padding: 20px; 
+  background-color: #e9ecef; 
+  border-radius: 5px; 
+}
+
+h2 {
+  margin-top: 20px;
+  color:#4A148C ; 
+  text-align:left ;
+}
+
+.dot { display:inline-block;font-size :24px ; opacity : .5 ; animation : shuffle .6s infinite alternate ; }
+
+@keyframes shuffle { from { transform : translateY(0); } to { transform : translateY(-10px); } }
+
+.dot:nth-child(1) { animation-delay : .2s ; }
+.dot:nth-child(2) { animation-delay : .4s ; }
+.dot:nth-child(3) { animation-delay : .6s ; }
+
+.button-with-label {
+   display: flex; 
+   flex-direction: column; 
+   align-items: center; 
+   margin: 0 15px; 
+}
+
+.button-label {
+   margin-top: 5px; 
+   padding-bottom:5px;
+   font-size:14px; 
+   color:#4A148C; 
+   text-align:center; 
+   font-family:'Arial', sans-serif; 
+   font-weight:bold; 
+}
+
+
+.circular-button {
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+@keyframes scale-button {
+   0% {
+       transform: scale(1);
+   }
+   50% {
+       transform: scale(1.1); 
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+
+.scale-animation {
+   animation: scale-button 0.2s ease; 
+}
+@keyframes pulse {
+   0% {
+       transform: scale(1);
+   }
+   50% {
+       transform: scale(1.1); 
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+
+.circular-button:hover {
+   animation: pulse 0.6s infinite;
+}
+
+.circular-button:active {
+   transform: scale(0.95);
+}
